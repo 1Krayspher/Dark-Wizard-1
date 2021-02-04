@@ -3,7 +3,7 @@ module.exports = (client, guild) => {
   const database = firebase.database();
 
   // ENTRADA EM SERVIDORES
-  client.on(
+  client.broadcastEval(
     `this.guilds.get("802289502563205140").channels.get(806599163131068487).send({
         embed: {
           title: "Entrada em Servidor",
