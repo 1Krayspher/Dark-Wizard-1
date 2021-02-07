@@ -16,6 +16,7 @@ module.exports = {
 
     message.channel.send({
       embed: {
+        color: 3447003,
         timestamp: new Date(),
         title: "Sistema de Casamento (Global)",
         footer: {

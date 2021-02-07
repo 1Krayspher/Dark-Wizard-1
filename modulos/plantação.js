@@ -2,7 +2,7 @@ let Tempo = 180 * 60000; // 3 Horas
 
 module.exports = {
   name: "plantação",
-  aliases: ["plantação", "plantacao"],
+  aliases: ["plantação", "plantacao", "plantaçao", "plantacão"],
   async execute(client, message, args, database, mdk) {
     var { body } = await require("snekfetch").get(
       require("../firebase.json").databaseURL +
@@ -99,9 +99,10 @@ module.exports = {
 
     message.channel.send({
       embed: {
+        color: 3447003,
         title: "Lotes de Plantação",
         description:
-          "➡ | Após jogar uma semente em suas terras, aguarde o tempo certo para Colher. \n\n" +
+          "➡ | Após jogar uma semente em suas terras, aguarde o tempo certo para Colher, fique de olho para não estragar. \n\n" +
           `${
             LOTE1
               ? `Status Lote 1 - ` +

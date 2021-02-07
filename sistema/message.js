@@ -49,6 +49,7 @@ module.exports = async (client, message) => {
     return message.channel
       .send({
         embed: {
+          color: 3447003,
           title: "BlackList",
           description:
             emoji.negativo +

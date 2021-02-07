@@ -75,6 +75,7 @@ module.exports = {
 
             message.channel.send({
               embed: {
+                color: 3447003,
                 title: "🧙‍♂️ | " + membro.tag,
                 description: `💵 | **Carteira:** ${
                   body

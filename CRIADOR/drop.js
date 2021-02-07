@@ -16,22 +16,22 @@ module.exports = {
 
     await message.channel
       .send(
-        "A Transportadora de valores mandou um Carro Forte com **" +
+        "Os magos mandaram um baú com com **" +
           require("currency-formatter").format(dinheiro, {
             code: "de-DE",
             symbol: "R$ ",
             precision: 0
           }) +
-          "** !!!\n Vocês tem **__" +
+          "** !!!\nVocês tem **__" +
           tempo +
-          " Segundos__** para disputar, digite `roubar` para ter a chance de rouba-lo",
+          " Segundos__** para disputar, digite `abrir` para ganhar uma chave e ter uma chance de abri-lo",
         {
           file:
-            "https://cdn.discordapp.com/attachments/644849613261504512/650547646548803594/oie_transparent.png"
+            "https://media.discordapp.net/attachments/783367484501262377/807010052224450601/drop_darkwizardGX.png"
         }
       )
       .then(async msg => {
-        const filter = m => m.content.toLowerCase() === "roubar";
+        const filter = m => m.content.toLowerCase() === "abrir";
         const collector = msg.channel.createMessageCollector(filter, {
           time: tempo * 1000
         });
@@ -63,7 +63,7 @@ module.exports = {
           if (carroforte.has(m.author.id)) {
             //
           } else {
-            m.react("🔫");
+            m.react("🔑");
             a.push(m.author.id);
             b.push(`**[${i++}]** ${m.author.username}`);
             carroforte.add(m.author.id);
@@ -79,7 +79,7 @@ module.exports = {
           if (a.length === 0)
             return message.channel
               .send(
-                "Como vocês são burros, deixaram o motorista fugir !!! 🚛💨"
+                "Como vocês são burros, deixaram um ladrão roubar a baú"
               )
               .then(m => m.delete(10000), msg.delete());
 
@@ -127,7 +127,7 @@ module.exports = {
                 message.channel.send(
                   "<@" +
                     ganhador +
-                    ">, você conseguiu roubar o Carro Forte e recebeu **" +
+                    ">, você conseguiu a chave certa e abriu o baú, recebeu **" +
                     require("currency-formatter").format(dinheiro, {
                       code: "de-DE",
                       symbol: "R$ ",

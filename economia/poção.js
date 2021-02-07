@@ -1,5 +1,5 @@
-let Tempo = 1440 * 60000;
-const suportediana = "687614701491716097";
+let Tempo = 1440 * 60000; //24 horas
+const suportediana = "802289502563205140";
 module.exports = {
   async execute(client, message, args, database, mdk) {
     var { body } = await require("snekfetch").get(
@@ -35,11 +35,12 @@ module.exports = {
     if (Ducketss !== null && Tempo - (Date.now() - Ducketss) > 0)
       return message.channel.send({
         embed: {
+          color: 3447003,
           title: message.author.tag,
           description:
             "⏰ | Aguarde **" +
             `${time.hours}h ${time.minutes}m ${time.seconds}s` +
-            " ** para coletar o seu duckets novamente"
+            " ** para coletar suas poções novamente"
         }
       });
 
@@ -101,13 +102,14 @@ module.exports = {
     if (message.guild.id !== suportediana)
       return message.channel.send(message.author,{
         embed: {
+          color: 80080,
           timestamp: new Date(),
-          title: "Duckets",
+          title: "Poções",
           description:
             "Você coletou **" +
             Duckets +
-            "** Duckets diário \n\n " +
-            " Ganhe o dobro de Duckets ao executar o comando no servidor de Suporte **[Clique Aqui](https://discord.gg/" +
+            "** Poções diária \n\n " +
+            " Ganhe o dobro de Poções ao executar o comando no servidor de suporte **[Clique aqui para entrar](https://discord.gg/" +
             require("../config.json").suporte +
             ")**",
           footer: {
@@ -115,22 +117,23 @@ module.exports = {
             text: message.author.tag
           },
           thumbnail: {
-            url: "https://t6.rbxcdn.com/da631cb8e0e383bc7ee068d72cb081c3"
+            url: "https://media.discordapp.net/attachments/806599163131068487/807075127250255873/pocao_DarkWizard.png?width=575&height=473"
           }
         }
       });
 
     message.channel.send({
       embed: {
+        color: 80080,
         timestamp: new Date(),
-        title: "Duckets",
-        description: "Você coletou **" + Duckets + "** Duckets diário",
+        title: "Poções",
+        description: "Você coletou **" + Duckets + "** Poções diária",
         footer: {
           icon_url: message.author.avatarURL,
           text: message.author.tag
         },
         thumbnail: {
-          url: "https://t6.rbxcdn.com/da631cb8e0e383bc7ee068d72cb081c3"
+          url: "https://media.discordapp.net/attachments/806599163131068487/807075127250255873/pocao_DarkWizard.png?width=575&height=473"
         }
       }
     });

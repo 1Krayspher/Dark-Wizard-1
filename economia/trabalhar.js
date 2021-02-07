@@ -39,11 +39,12 @@ module.exports = {
     if (TempoTrabalho !== null && Tempo - (Date.now() - TempoTrabalho) > 0)
       return message.channel.send({
         embed: {
+          color: 3447003,
           title: message.author.tag,
           description:
             "⏰ | Aguarde **" +
             `${time.hours}h ${time.minutes}m ${time.seconds}s` +
-            " ** para entrar no Trabalhar novamente"
+            " ** para trabalhar novamente"
         }
       });
 
@@ -70,7 +71,7 @@ module.exports = {
       return message.channel.send(
         "🔔 | Você não possui nenhum emprego, digite: **" +
           prefixo +
-          "empregos** e entre em algum Serviço"
+          "empregos** e entre em algum"
       );
 
     let profissão = trabalho;
@@ -152,7 +153,7 @@ module.exports = {
         dinheiro: dinmão + Salário
       });
 
-    let levelxp = Math.floor(Math.random() * 75) + 25;
+    let levelxp = Math.floor(Math.random() * 90) + 50;
 
     var { body } = await require("snekfetch").get(
       require("../firebase.json").databaseURL +
@@ -198,6 +199,7 @@ module.exports = {
 
     message.channel.send({
       embed: {
+        color: 3447003,
         timestamp: new Date(),
         title: "Trabalho",
         description:

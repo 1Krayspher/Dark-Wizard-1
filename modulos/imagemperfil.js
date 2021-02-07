@@ -29,6 +29,7 @@ module.exports = {
       message.channel
         .send({
           embed: {
+            color: 3447003,
             title: "Imagem de Perfil",
             description:
               "Gostaria de trocar a Imagem do seu Perfil ? \n\n Digite: `Sim` ou `Não`     *Tamanho Recomendado: **1024x420***",
@@ -78,6 +79,7 @@ module.exports = {
 
                     message.channel.send({
                       embed: {
+                        color: 3447003,
                         title: message.author.tag,
                         description:
                           "✅ | Você alterou a Imagem de Perfil com sucesso"

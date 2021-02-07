@@ -31,6 +31,7 @@ module.exports = {
     if (!regexArray || regexArray.length < 1) {
       return message.channel.send({
         embed: {
+          color: 3447003,
           timestamp: new Date(),
           title: "Modo de Uso",
           description: prefixo + "blackjack `quantidade`"
@@ -73,9 +74,9 @@ module.exports = {
         )
         .then(m => m.delete(5000));
 
-    if (quantidade < 1000) {
+    if (quantidade < 500) {
       message.channel
-        .send(emoji.aviso + " | O valor mínimo para o blackjack é **R$ 1.000**")
+        .send(emoji.aviso + " | O valor mínimo para o blackjack é **R$500**")
         .then(m => m.delete(10000));
       return 0;
     }
@@ -83,7 +84,7 @@ module.exports = {
     if (quantidade > 100000) {
       message.channel
         .send(
-          emoji.aviso + " | O valor maximo para o blackjack é **R$ 100.000**"
+          emoji.aviso + " | O valor maximo para o blackjack é **R$ 100.000**, não queremos que perca tanto dinheiro!"
         )
         .then(m => m.delete(10000));
       return 0;

@@ -28,14 +28,14 @@ module.exports = {
             timestamp: new Date(),
             title: "Modo de Uso",
             description:
-              prefixo + "depositar `quantidade` | " + prefixo + "depositarall"
+               "d!depositar `quantidade` | " + "`d!depositarall` para depositar tudo"
           }
         })
         .then(m => m.delete(10 * 1000), message.delete(10 * 1000));
     }
 
     var din = Number(args[0]);
-    if (!din) return message.channel.send("Insira uma quantia");
+    if (!din) return message.channel.send("Insira uma quantia. E não use vírgulas");
     if (isNaN(din)) return;
 
     var { body } = await require("snekfetch").get(

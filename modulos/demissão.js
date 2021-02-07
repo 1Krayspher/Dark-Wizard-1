@@ -40,7 +40,7 @@ module.exports = {
       return message.channel.send(
         "🔔 | Você não possui nenhum emprego, digite: **" +
           prefixo +
-          "empregos** e entre em algum Serviço"
+          "empregos** e entre em algum"
       );
 
     let profissão = trabalho;
@@ -48,7 +48,7 @@ module.exports = {
     if (profissão === 2) profissão = "Jornaleiro";
     if (profissão === 3) profissão = "Sorveteiro";
     if (profissão === 4) profissão = "Fotográfo";
-    if (profissão === 5) profissão = "PizzaBoy";
+    if (profissão === 5) profissão = "GogoBoy";
     if (profissão === 6) profissão = "Barman";
     if (profissão === 7) profissão = "Taxista";
     if (profissão === 8) profissão = "Transportador";
@@ -64,11 +64,12 @@ module.exports = {
     if (profissão === 18) profissão = "Polícia Militar";
     if (profissão === 19) profissão = "Delegado";
     if (profissão === 20) profissão = "Motorista de Carro Forte";
-    if (profissão === 666) profissão = "Criador da Diana";
+    if (profissão === 666) profissão = "Filho do '来 Dark haha.#0010";
     /////////////////////////////////////////////////////////////
     message.channel
       .send({
         embed: {
+          color: 3447003,
           title: "Pedido de Demissão",
           description:
             "Tem certeza que deseja pedir demissão do seu emprego de **" +
@@ -116,6 +117,7 @@ module.exports = {
 
               message.channel.send({
                 embed: {
+                  color: 3447003,
                   title: message.author.tag,
                   description:
                     "✅ | Você se demitiu com sucesso e virou **Mendigo**"

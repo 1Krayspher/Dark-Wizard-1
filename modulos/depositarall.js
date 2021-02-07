@@ -37,9 +37,9 @@ module.exports = {
       dinmão = Number(body.dinheiro);
     }
 
-    if (dinmão < 100) {
+    if (dinmão < 200) {
       message.channel
-        .send("🔔 | O valor mínimo para depósito é **R$ 100**")
+        .send("🔔 | O valor mínimo para depósito é **R$200**")
         .then(m => m.delete(10 * 1000), message.delete(10 * 1000));
       return 0;
     }
@@ -58,6 +58,7 @@ module.exports = {
 
     message.channel.send({
       embed: {
+        color: 3447003,
         timestamp: new Date(),
         title: "Depósito Bancário",
         description: `💵 | Você depositou **${require("currency-formatter").format(

@@ -25,6 +25,7 @@ module.exports = {
       return message.channel
         .send({
           embed: {
+            color: 3447003,
             timestamp: new Date(),
             title: "Modo de Uso",
             description:
@@ -81,9 +82,9 @@ module.exports = {
       dinmão = Number(body.dinheiro);
     }
 
-    if (din < 500) {
+    if (din < 200) {
       message.channel
-        .send("🔔 | O valor mínimo para transferencia é **R$ 500**")
+        .send("🔔 | O valor mínimo para transferencia é **R$200**")
         .then(m => m.delete(10 * 1000), message.delete(10 * 1000));
       return 0;
     }
@@ -143,6 +144,7 @@ module.exports = {
 
     message.channel.send({
       embed: {
+        color: 3447003,
         timestamp: new Date(),
         title: "Transferência Bancária",
         description:

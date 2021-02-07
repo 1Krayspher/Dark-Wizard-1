@@ -9,7 +9,7 @@ const e = {
 
 module.exports = {
   name: "divorciar",
-  aliases: ["divorciar", "divorce"],
+  aliases: ["divorciar", "divorce", "divorcio"],
   async execute(client, message, args, database, mdk) {
     let user;
     if (message.mentions.users.first()) {
@@ -29,21 +29,24 @@ module.exports = {
         if (snap.val() == null)
           return message.channel.send({
             embed: {
+              color: 3447003,
               title: message.author.tag,
-              description: e.negativo + ` | você não está casado(a) no momento`
+              description: e.negativo + ` | você não está casado(a)`
             }
           });
         if (snap.val().casado < 1)
           return message.channel.send({
             embed: {
+              color: 3447003,
               title: message.author.tag,
-              description: e.negativo + ` | você não está casado(a) no momento`
+              description: e.negativo + ` | você não está casado(a)`
             }
           });
 
         message.channel
           .send({
             embed: {
+              color: 3447003,
               timestamp: new Date(),
               title: e.divorce + " | Divorciando",
               description: `${message.author} você fez o pedido de divórcio. \n\n ${e.positivo} \`aceitar\`\n${e.negativo}\`recusar\``
@@ -88,6 +91,7 @@ module.exports = {
 
                         message.channel.send({
                           embed: {
+                            color: 3447003,
                             description:
                               e.positivo +
                               " | " +
@@ -103,8 +107,9 @@ module.exports = {
                 msg.delete();
                 message.channel.send({
                   embed: {
+                    color: 3447003,
                     description:
-                      e.negativo + ` | O Comando foi cancelado com sucesso`
+                      e.negativo + ` | O divórcio foi cancelado com sucesso`
                   }
                 });
               }

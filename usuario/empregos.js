@@ -81,6 +81,7 @@ module.exports = {
     message.channel
       .send({
         embed: {
+          color: 3447003,
           title: "Agência de Empregos",
           description:
             "➡ | Digite o número da Profissão que deseja entrar: \n\n" +

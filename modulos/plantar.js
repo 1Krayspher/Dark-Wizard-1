@@ -67,7 +67,8 @@ module.exports = {
     message.channel
       .send({
         embed: {
-          title: "Colheita de Feliz",
+          color: 3447003,
+          title: "Colheita Feliz",
           description:
             "Digite o número do Lote que deseja plantar\n\n" +
             `${lote1 ? e.um + " - Lote 1" : e.um + " - Lote 1"} \n` +
@@ -119,6 +120,7 @@ module.exports = {
             if (lote1 > 1)
               return message.channel.send({
                 embed: {
+                   color: 3447003,
                   title: message.author.tag,
                   description:
                     e.tempo +

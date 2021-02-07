@@ -62,6 +62,7 @@ module.exports = {
     if (TempoPesca !== null && Tempo - (Date.now() - TempoPesca) > 0)
       return message.channel.send({
         embed: {
+          color: 3447003,
           title: message.author.tag,
           description:
             "⏰ | Aguarde **" +
@@ -111,7 +112,7 @@ module.exports = {
     }
 
     if (Vara < 1)
-      return message.channel.send("❌ | Você não possuí Vara de Pescar");
+      return message.channel.send("❌ | Você não possuí Vara de Pescar, use `d!loja utilidades` para comprar uma!");
 
     var Camarao;
     if (!body) {
@@ -121,7 +122,7 @@ module.exports = {
     }
 
     if (Camarao < 1)
-      return message.channel.send("❌ | Você não possuí Camarão o Suficiente");
+      return message.channel.send("❌ | Você não possuí Camarão o Suficiente para usar de isca, use `d!loja utilidades` para comprar mais!");
 
     var Posse;
     if (!body) {
@@ -252,8 +253,9 @@ module.exports = {
 
     message.channel.send({
       embed: {
+        color: 3447003,
         timestamp: new Date(),
-        title: "Pescando",
+        title: "Pescando...",
         description: mensaje,
         footer: {
           icon_url: message.author.avatarURL,

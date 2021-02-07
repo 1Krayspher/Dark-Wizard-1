@@ -37,6 +37,7 @@ module.exports = {
     if (Bonus !== null && Tempo - (Date.now() - Bonus) > 0)
       return message.channel.send({
         embed: {
+          color: 3447003,
           title: message.author.tag,
           description:
             "⏰ | Aguarde **" +
@@ -113,6 +114,7 @@ module.exports = {
 
     message.channel.send({
       embed: {
+        color: 3447003,
         timestamp: new Date(),
         title: "Bônus",
         description:

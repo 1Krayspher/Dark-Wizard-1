@@ -123,7 +123,8 @@ module.exports = {
 
     message.channel.send({
       embed: {
-        title: "Inventário do(a): " + user.tag,
+        color: 3447003,
+        title: "Inventário de: " + user.tag,
         description:
           `${Anel ? `💍 | Anel de Casamento: ✅` + "\n" : ""}` +
           `${Arma ? `🔫 | ${Arma}: ✅` + "\n" : ""}` +

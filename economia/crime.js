@@ -37,6 +37,7 @@ module.exports = {
     )
       return message.channel.send({
         embed: {
+          color: 3447003,
           title: message.author.tag,
           description:
             "❌ | Você não pode entrar para o crime pois tem Cargo Alto no **GOVERNO**"
@@ -66,6 +67,7 @@ module.exports = {
     if (TempoCrime !== null && Tempo - (Date.now() - TempoCrime) > 0)
       return message.channel.send({
         embed: {
+          color: 3447003,
           title: message.author.tag,
           description:
             "⏰ | Aguarde **" +
@@ -109,6 +111,7 @@ module.exports = {
             });
           message.channel.send({
             embed: {
+              color: 3447003,
               title: "Crime",
               description:
                 random_policia[
@@ -198,6 +201,7 @@ module.exports = {
 
         message.channel.send({
           embed: {
+            color: 3447003,
             title: "Crime",
             description:
               random_crime[Math.floor(Math.random() * random_crime.length)],

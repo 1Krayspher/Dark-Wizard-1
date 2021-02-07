@@ -11,6 +11,7 @@ module.exports = {
                 require("fs").readdir("./modulos/", (err, modulos) => {
                 message.channel.send({
                   embed: {
+                    color: 3447003, 
                     timestamp: new Date(),
                     title: "Menu de Comandos",
                     footer: {

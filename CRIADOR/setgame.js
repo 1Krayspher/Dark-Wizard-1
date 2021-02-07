@@ -24,7 +24,7 @@ module.exports = {
         database.ref(`Owner`).update({
           game: (snap.val().game = Game)
         });
-        client.user.setGame(Game, "https://twitch.tv/Diana");
+        client.user.setGame(Game, "https://www.twitch.tv/DarkzeraGX");
 
         message.channel.send("✅ | Meu status foi alterado com sucesso!");
       });

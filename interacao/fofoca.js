@@ -6,6 +6,7 @@ module.exports = {
     let polemicas = [
       `O usuário \`${user.tag}\` foi flagado(a) fazendo GF com o(a) \`${user2.tag}\` nas call do servidor`,
       `O usuário \`${user.tag}\` foi visto usando couple com o(a) \`${user2.tag}\``,
+      `O usuário \`${user.tag}\` foi visto usando conta fake pra farmar dinheiro junto com o(a) \`${user2.tag}\``
       `O usuário \`${user.tag}\` foi flagado(a) fazendo voz de Loli para ganhar nitro do(a) \`${user2.tag}\``,
       `O usuário \`${user.tag}\` foi flagado(a) gemendo para o(a) \`${user2.tag}\` pra ganhar carguinho no servidor`
     ];

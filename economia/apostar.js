@@ -23,6 +23,7 @@ module.exports = {
     if (!regexArray || regexArray.length < 1) {
       return message.channel.send({
         embed: {
+          color: 3447003,
           timestamp: new Date(),
           title: "Modo de Uso",
           description: prefixo + "apostar @membro `quantidade`"
@@ -47,7 +48,7 @@ module.exports = {
           quantidade <= 0 ||
           quantidade !== Math.trunc(quantidade)
         ) {
-          message.channel.send("🔔 | O valor mínimo para aposta é **R$ 500**");
+          message.channel.send("🔔 | O valor mínimo para aposta é **R$100**");
           return;
         }
 
@@ -60,9 +61,9 @@ module.exports = {
           .ref(`Servidores/Banco/${message.guild.id}/${user.id}`)
           .once("value")
           .then(async function(snap) {
-            if (quantidade < 500) {
+            if (quantidade < 100) {
               message.channel.send(
-                "🔔 | O valor mínimo para aposta é **R$ 500**"
+                "🔔 | O valor mínimo para aposta é **R$100**"
               );
               return 0;
             }
@@ -76,6 +77,7 @@ module.exports = {
             message.channel
               .send({
                 embed: {
+                  color: 3447003,
                   description:
                     user +
                     " você foi desafiado por " +
@@ -193,7 +195,8 @@ module.exports = {
 
                                   message.channel.send({
                                     embed: {
-                                      title: "Aposta",
+                                      color: 3447003,
+                                      title: "Sistema de Aposta",
                                       description:
                                         "💵 | <@" +
                                         ganhador +

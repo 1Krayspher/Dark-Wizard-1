@@ -26,7 +26,7 @@ module.exports = {
         message.author
           .send(
             client.user +
-              " é um Bot de RPG focado em Econômia e Interação.\ne está em **" +
+              " é um Bot de RPG focado em Econômia e Interação.\nE está em **" +
               require("currency-formatter").format(totalservidores, {
                 code: "de-DE",
                 precision: 0
@@ -37,7 +37,7 @@ module.exports = {
                 precision: 0
               }) +
               "** usuários;\n\n➡ **Servidor de Suporte:** https://discord.gg/XKqemmQzJs\n➡ **Quer me adicionar em seu servidor ?** " +
-              "**__Chama o '来 Dark haha.#0010 na dm__**" 
+              "**__Chama o '来 Dark haha.#0010 (<@469947979252367361>) na dm__**" 
           )
           .then(abc => {
             message.channel.send(
@@ -47,7 +47,7 @@ module.exports = {
           .catch(err => {
             message.channel.send(
               client.user +
-                " é um Bot de RPG focado 100% em Econômia\ne está em **" +
+                " é um Bot de RPG focado 100% em Econômia\nE está em **" +
                 require("currency-formatter").format(totalservidores, {
                   code: "de-DE",
                   precision: 0

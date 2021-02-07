@@ -68,6 +68,7 @@ module.exports = {
     message.channel
       .send({
         embed: {
+          color: 3447003,
           title: "Colheita Feliz",
           description:
             e.seta1 +
@@ -123,6 +124,7 @@ module.exports = {
               return message.channel
                 .send({
                   embed: {
+                    color: 3447003,
                     title: message.author.tag,
                     description:
                       e.negativo +
@@ -136,6 +138,7 @@ module.exports = {
               return message.channel
                 .send({
                   embed: {
+                    color: 3447003,
                     title: message.author.tag,
                     description:
                       e.negativo +
@@ -198,7 +201,8 @@ module.exports = {
 
             message.channel.send({
               embed: {
-                title: "Colhendo",
+                color: 3447003,
+                title: "Colhendo...",
                 description:
                   e.colher +
                   " | " +
@@ -237,6 +241,7 @@ module.exports = {
               return message.channel
                 .send({
                   embed: {
+                    color: 3447003,
                     title: message.author.tag,
                     description:
                       e.negativo +
@@ -250,6 +255,7 @@ module.exports = {
               return message.channel
                 .send({
                   embed: {
+                    color: 3447003,
                     title: message.author.tag,
                     description:
                       e.negativo +
@@ -305,7 +311,8 @@ module.exports = {
 
             message.channel.send({
               embed: {
-                title: "Colhendo",
+                color: 3447003,
+                title: "Colhendo...",
                 description:
                   e.colher +
                   " | " +
@@ -351,6 +358,7 @@ module.exports = {
               return message.channel
                 .send({
                   embed: {
+                    color: 3447003,
                     title: message.author.tag,
                     description:
                       e.negativo +
@@ -364,6 +372,7 @@ module.exports = {
               return message.channel
                 .send({
                   embed: {
+                    color: 3447003,
                     title: message.author.tag,
                     description:
                       e.negativo +
@@ -412,7 +421,8 @@ module.exports = {
 
             message.channel.send({
               embed: {
-                title: "Colhendo",
+                color: 3447003,
+                title: "Colhendo...",
                 description:
                   e.colher +
                   " | " +
@@ -503,6 +513,7 @@ module.exports = {
               return message.channel
                 .send({
                   embed: {
+                    color: 3447003,
                     title: message.author.tag,
                     description:
                       e.negativo +
@@ -530,7 +541,8 @@ module.exports = {
 
             message.channel.send({
               embed: {
-                title: "Colhendo",
+                color: 3447003,
+                title: "Colhendo...",
                 description:
                   e.colher +
                   " | " +

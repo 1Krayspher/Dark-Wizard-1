@@ -34,6 +34,7 @@ module.exports = {
     )
       return message.channel.send({
         embed: {
+          color: 3447003,
           title: message.author.tag,
           description:
             emoji.negativo +
@@ -102,9 +103,10 @@ module.exports = {
     if (TempoRoubar !== null && Tempo - (Date.now() - TempoRoubar) > 0)
       return message.channel.send({
         embed: {
+          color: 3447003,
           title: message.author.tag,
           description:
-            "🚔 **|** Você está escondido para que a policia não o apanhe. Aguarde **" +
+            "🚔 **|** Você está escondido da polícia. Aguarde **" +
             `${time.minutes}m ${time.seconds}s` +
             " ** para roubar novamente"
         }
@@ -117,7 +119,7 @@ module.exports = {
 
     if (user.id === message.author.id)
       return message.channel.send(
-        emoji.negativo + " | Você não pode Roubar a si mesmo"
+        emoji.negativo + " | Você não pode roubar a si mesmo"
       );
 
     if (user.id === config.criador)
@@ -125,7 +127,7 @@ module.exports = {
         emoji.negativo +
           " | " +
           message.author +
-          " você não pode roubar o meu criador"
+          " você não pode roubar o meu criador, um mago protege seu mestre 🧙‍♂️"
       );
 
     var { body } = await snekfetch.get(
@@ -312,7 +314,7 @@ module.exports = {
     let Dinheirãoo = Math.round(Math.random() * dinheiro);
     if (dinheiro < 1)
       return message.channel.send(
-        emoji.negativo + " | O usuário não tem dinheiro para você roubar"
+        emoji.negativo + " | O usuário não tem dinheiro para ser roubado"
       );
 
     database.ref(`Servidores/Banco/${message.guild.id}/${user.id}`).set({
@@ -537,6 +539,7 @@ module.exports = {
 */
     message.channel.send({
       embed: {
+        color: 3447003,
         timestamp: new Date(),
         title: "Roubo",
         description:

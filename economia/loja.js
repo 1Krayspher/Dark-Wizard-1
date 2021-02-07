@@ -25,7 +25,7 @@ let valorBalas = 5000;
 let valorvara = 15000;
 let valorcamarao = 5000;
 
-//LOJA DUCKETS
+//LOJA POÇÕES
 let valorduckets = 7500;
 let ducketsvalor = 3;
 
@@ -50,23 +50,24 @@ module.exports = {
     if (!regexArray || regexArray.length < 1) {
       return message.channel.send({
         embed: {
+          color: 3447003,
           timestamp: new Date(),
           title: "Sistema de Loja",
           description:
             /*prefixo +
             "Loja Tags \n" +*/
             prefixo +
-            "Loja Maconha \n" +
+            "loja maconha \n" +
             prefixo +
-            "Loja Armas\n" +
+            "loja armas\n" +
             /*prefixo +
             "Loja Mascote\n" +*/
             prefixo +
-            "Loja Utilidades\n" +
+            "loja utilidades\n" +
             prefixo +
-            "Loja Duckets\n" +
+            "loja poções\n" +
             prefixo +
-            "Loja Vendas",
+            "loja vendas",
           footer: {
             icon_url: message.guild.iconURL,
             text: message.guild.name
@@ -85,6 +86,7 @@ module.exports = {
       message.channel
         .send({
           embed: {
+            color: 3447003,
             timestamp: new Date(),
             title: "Loja de Maconha",
             description:
@@ -282,6 +284,7 @@ module.exports = {
 
                 return message.channel.send({
                   embed: {
+                    color: 3447003, 
                     title: "Compra Efetuada",
                     description:
                       emoji.positivo +
@@ -1055,6 +1058,7 @@ module.exports = {
 
                 return message.channel.send({
                   embed: {
+                    color: 3447003,
                     title: "Compra Efetuada",
                     description:
                       emoji.positivo +
@@ -1237,6 +1241,7 @@ module.exports = {
 
                 return message.channel.send({
                   embed: {
+                    color: 3447003,
                     title: "Compra Efetuada",
                     description:
                       emoji.positivo +
@@ -1419,6 +1424,7 @@ module.exports = {
 
                 return message.channel.send({
                   embed: {
+                    color: 3447003,
                     title: "Compra Efetuada",
                     description:
                       emoji.positivo +
@@ -1601,6 +1607,7 @@ module.exports = {
 
                 return message.channel.send({
                   embed: {
+                    color: 3447003,
                     title: "Compra Efetuada",
                     description:
                       emoji.positivo +
@@ -1779,6 +1786,7 @@ module.exports = {
 
                 return message.channel.send({
                   embed: {
+                    color: 3447003,
                     title: "Compra Efetuada",
                     description:
                       emoji.positivo +
@@ -1808,6 +1816,7 @@ module.exports = {
       message.channel
         .send({
           embed: {
+            color: 3447003,
             timestamp: new Date(),
             title: "Loja de Utilidades",
             description:
@@ -2017,6 +2026,7 @@ module.exports = {
 
                 return message.channel.send({
                   embed: {
+                    color: 344703,
                     title: "Compra Efetuada",
                     description:
                       emoji.positivo +
@@ -2193,6 +2203,7 @@ module.exports = {
 
                 return message.channel.send({
                   embed: {
+                    color: 3447003,
                     title: "Compra Efetuada",
                     description:
                       emoji.positivo +
@@ -2367,6 +2378,7 @@ module.exports = {
 
                 return message.channel.send({
                   embed: {
+                    color: 3447003,
                     title: "Compra Efetuada",
                     description:
                       emoji.positivo +
@@ -2387,12 +2399,13 @@ module.exports = {
         });
     }
     //
-    if (message.content.toLowerCase() == prefixo + "loja duckets") {
+    if (message.content.toLowerCase() == prefixo + "loja poções") {
       message.channel
         .send({
           embed: {
+            color: 3447003,
             timestamp: new Date(),
-            title: "Loja de Duckets",
+            title: "Loja de Poções",
             description:
               "Digite o número do item que deseja comprar \n\n" +
               emoji.um +
@@ -2404,7 +2417,7 @@ module.exports = {
               }) +
               " + " +
               ducketsvalor +
-              " Duckets\n",
+              " Poções\n",
             footer: {
               icon_url: message.author.avatarURL,
               text: `Você tem apenas ${TempoCollector} segundos para responder`
@@ -2455,7 +2468,7 @@ module.exports = {
 
                 if (Duckets < ducketsvalor)
                   return message.channel.send(
-                    emoji.negativo + " | Você não tem duckets suficiente"
+                    emoji.negativo + " | Você não Poções suficiente"
                   );
 
                 var { body } = await snekfetch.get(
@@ -2571,10 +2584,11 @@ module.exports = {
 
                 return message.channel.send({
                   embed: {
+                    color: 3447003,
                     title: "Compra Efetuada",
                     description:
                       emoji.positivo +
-                      ` | Você adquiriu **Anel de Casamento** por **R$ ${valorduckets} + ${ducketsvalor}** Duckets`
+                      ` | Você adquiriu **Anel de Casamento** por **R$ ${valorduckets} + ${ducketsvalor}** Poções`
                   }
                 });
 
@@ -2597,6 +2611,7 @@ module.exports = {
       message.channel
         .send({
           embed: {
+            color: 3447003,
             timestamp: new Date(),
             title: "Loja de Vendas",
             description:
@@ -2757,6 +2772,7 @@ module.exports = {
 
                 message.channel.send({
                   embed: {
+                    color: 3447003,
                     title: "Venda Efetuada",
                     description:
                       emoji.positivo +
@@ -2868,6 +2884,7 @@ module.exports = {
 
                 message.channel.send({
                   embed: {
+                    color: 3447003,
                     title: "Venda Efetuada",
                     description:
                       emoji.positivo +
@@ -3018,6 +3035,7 @@ module.exports = {
 
                 message.channel.send({
                   embed: {
+                    color: 3447003,
                     title: "Venda Efetuada",
                     description:
                       emoji.positivo +
@@ -3160,6 +3178,7 @@ module.exports = {
 
                 message.channel.send({
                   embed: {
+                    color: 3447003,
                     title: "Venda Efetuada",
                     description:
                       emoji.positivo +

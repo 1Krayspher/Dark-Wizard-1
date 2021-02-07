@@ -251,7 +251,7 @@ if (atfk < 15) return;
 
   const random_menção = [prefixo + "help", prefixo + "ajuda", prefixo + "menu"];
 
-  if (message.content.toLowerCase().includes(`<@!${client.user.id}>`)) {
+  if (message.content.toLowerCase().includes(client.user.id)) {
     message.channel.send(
       `> Olá, Eu sou o \`${
         client.user.tag
@@ -303,7 +303,7 @@ if (atfk < 15) return;
 
         await message.channel
           .send(
-            "A Transportadora de valores mandou um Carro Forte com **" +
+            "Os magos mandaram um baú com **" +
               require("currency-formatter").format(dinheiro, {
                 code: "de-DE",
                 symbol: "R$ ",
@@ -311,14 +311,14 @@ if (atfk < 15) return;
               }) +
               "** !!!\n Vocês tem **__" +
               tempo +
-              " Segundos__** para disputar, digite `roubar` para ter a chance de rouba-lo",
+              " Segundos__** para disputar, digite `abrir` para ganhar uma chave e ter uma chance de abri-lo",
             {
               file:
-                "https://cdn.discordapp.com/attachments/644849613261504512/650547646548803594/oie_transparent.png"
+                "https://cdn.discordapp.com/attachments/783367484501262377/807010052224450601/drop_darkwizardGX.png"
             }
           )
           .then(async msg => {
-            const filter = m => m.content.toLowerCase() === "roubar";
+            const filter = m => m.content.toLowerCase() === "abrir";
             const collector = msg.channel.createMessageCollector(filter, {
               time: tempo * 100
             });
@@ -350,7 +350,7 @@ if (atfk < 15) return;
               if (carroforte.has(m.author.id)) {
                 //
               } else {
-                m.react("🔫");
+                m.react("🔑");
                 a.push(m.author.id);
                 b.push(`**[${i++}]** ${m.author.username}`);
                 carroforte.add(m.author.id);
@@ -366,7 +366,7 @@ if (atfk < 15) return;
               if (a.length === 0)
                 return message.channel
                   .send(
-                    "Como vocês são burros, deixaram o motorista fugir!!! 🚛💨"
+                    "Como vocês são burros, deixaram um ladrão roubar a baú"
                   )
                   .then(m => m.delete(10000), msg.delete());
 
@@ -416,7 +416,7 @@ if (atfk < 15) return;
                     message.channel.send(
                       "<@" +
                         ganhador +
-                        ">, você conseguiu roubar o Carro Forte e recebeu **" +
+                        ">, você conseguiu a chave certa e abriu o baú, recebeu **" +
                         require("currency-formatter").format(dinheiro, {
                           code: "de-DE",
                           symbol: "R$ ",
@@ -510,7 +510,7 @@ if (atfk < 15) return;
 
           await message.channel
             .send(
-              `🧙‍♂️ | Parabéns ${message.author},\n o seu level de magia subiu para **${LEVELXPAZAO}**`
+              `🧙‍♂️ | Parabéns ${message.author}!\n Você elevou sua magia para o level **${LEVELXPAZAO}**`
             )
             .then(m => m.delete(10000));
         }

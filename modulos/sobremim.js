@@ -35,6 +35,7 @@ module.exports = {
     message.channel
       .send({
         embed: {
+          color: 3447003,
           title: "Sobre Mim",
           description:
             "Gostaria de trocar a frase do seu Perfil para **" +

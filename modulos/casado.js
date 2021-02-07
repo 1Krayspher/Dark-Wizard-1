@@ -50,6 +50,7 @@ module.exports = {
 
     message.channel.send({
       embed: {
+        color: 3447003,
         timestamp: new Date(),
         title: "◆  " + user.tag + "  ◆",
         description: `${
@@ -71,7 +72,7 @@ module.exports = {
         thumbnail: {
           url: `${
             casado
-              ? "https://media.discordapp.net/attachments/706636143122317443/737738168991744068/868008.png"
+              ? "https://giphy.com/gifs/love-heart-pretty-iNxi3TWwhwYehzY9IM"
               : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Broken_heart.svg/1200px-Broken_heart.svg.png"
           }`
         }

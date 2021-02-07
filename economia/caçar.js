@@ -98,7 +98,7 @@ module.exports = {
     }
 
     if (Armacaça < 1)
-      return message.channel.send("❌ | Você não possuí Arma de Caça");
+      return message.channel.send("❌ | Você não possuí Arma de Caça, use **d!loja Armas** e compre uma Arma de Caça.");
 
     var Munição;
     if (!body) {
@@ -108,7 +108,7 @@ module.exports = {
     }
 
     if (Munição < 1)
-      return message.channel.send("❌ | Você não possuí Bala o Suficiente");
+      return message.channel.send("❌ | Você não possuí Bala o Suficiente, use **d!loja Utilidades** para comprar.");
 
     var Vara;
     if (!body) {
@@ -253,6 +253,7 @@ module.exports = {
 
     message.channel.send({
       embed: {
+        color: 2447003,
         timestamp: new Date(),
         title: "Caçando",
         description: mensaje,

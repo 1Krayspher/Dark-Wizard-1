@@ -35,12 +35,13 @@ module.exports = {
 
           message.channel.send({
             embed: {
+              color: 3447003,
               title: message.author.tag,
               description:
                 e.tempo +
                 " | Aguarde **" +
                 `${time.minutes}m ${time.seconds}s` +
-                " ** para fazer outro Gozofone novamente"
+                " ** para fazer GF novamente"
             }
           });
         } else {
@@ -64,6 +65,7 @@ module.exports = {
           if (casado < 1)
             return message.channel.send({
               embed: {
+                color: 3447003,
                 title: message.author.tag,
                 description:
                   e.negativo + ` | você precisa estar casado(a) para fazer gf.`
@@ -71,10 +73,10 @@ module.exports = {
             });
 
           const random_prostituir = [
-            "😈 | Você fez Gozofone com <@" +
+            "😈 | Você fez GF com <@" +
               Casado.id +
               "> e ganhou" +
-              ` **R$ ${Dinheirão}** `
+              ` **R$${Dinheirão}** `
           ];
 
           var { body } = await require("snekfetch").get(
@@ -106,8 +108,9 @@ module.exports = {
                 });
               message.channel.send({
                 embed: {
+                  color: 3447003,
                   timestamp: new Date(),
-                  title: "🔞 | Gozofone",
+                  title: "🔞 | GF, tirem as crianças do chat!",
                   description:
                     random_prostituir[
                       Math.floor(Math.random() * random_prostituir.length)

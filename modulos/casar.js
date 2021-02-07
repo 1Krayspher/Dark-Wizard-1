@@ -34,6 +34,7 @@ module.exports = {
     if (!bmember)
       return message.channel.send({
         embed: {
+          color: 3447003,
           description:
             e.negativo +
             " | " +
@@ -45,6 +46,7 @@ module.exports = {
     if (bmember.id === message.author.id)
       return message.channel.send({
         embed: {
+          color: 3447003,
           description:
             e.negativo +
             " | " +
@@ -56,6 +58,7 @@ module.exports = {
     if (user.bot)
       return message.channel.send({
         embed: {
+          color: 3447003,
           description:
             e.negativo +
             " | " +
@@ -78,6 +81,7 @@ module.exports = {
     if (casado > 0)
       return message.channel.send({
         embed: {
+          color: 3447003,
           description:
             e.aviso +
             ` | ${message.author}, você já está casado com <@${casado}>\n${e.seta1} | **Digite:** ${prefixo}divorciar para ficar solteiro(a) novamente`
@@ -98,6 +102,7 @@ module.exports = {
     if (CAsado > 0)
       return message.channel.send({
         embed: {
+          color: 3447003,
           description:
             e.aviso + ` | ${bmember} já está casado(a) com <@${CAsado}>`
         }
@@ -106,6 +111,7 @@ module.exports = {
     message.channel
       .send({
         embed: {
+          color: 3447003,
           timestamp: new Date(),
           title: e.anel + " | Pedido de Casamento",
           description: `**${message.author} pediu ${bmember.user} em Casamento, quer Casar comigo ?**\n\n ${e.positivo} \`Sim\`\n${e.negativo}\`Não\``,
@@ -164,6 +170,7 @@ module.exports = {
             if (CAsado > 0)
               return message.channel.send({
                 embed: {
+                  color: 3447003,
                   description:
                     e.aviso +
                     ` | ${message.author}, já está casado(a) com <@${CAsado}>`
@@ -184,6 +191,7 @@ module.exports = {
             if (CAsado > 0)
               return message.channel.send({
                 embed: {
+                  color: 3447003,
                   description:
                     e.aviso + ` | ${CAsado}, já está casado(a) com <@${CAsadO}>`
                 }
@@ -234,16 +242,18 @@ module.exports = {
             message.channel
               .send({
                 embed: {
+                  color: 3447003,
                   description:
                     e.positivo +
-                    ` | O usuário ${bmember.user} aceitou o pedido de casamento de ${message.author}`
+                    ` | O usuário ${bmember.user} aceitou o pedido de casamento de ${message.author}, felicidades ao casal!`
                 }
               })
               .then(async msg => {
                 setTimeout(() => {
                   msg.edit({
                     embed: {
-                      description: `**${bmember.user} & ${message.author}**, atualizaram o Relacionamento para **Casados**`
+                      color: 344703,
+                      description: `**${bmember.user} & ${message.author}**, atualizaram o status de relacionamento para **Casados**`
                     }
                   });
                 }, 2500);
@@ -254,9 +264,10 @@ module.exports = {
             msg.delete()
             message.channel.send({
               embed: {
+                color: 3447003,
                 description:
                   e.negativo +
-                  ` | O usuário ${bmember.user} recusou o pedido de casamento de ${message.author}`
+                  ` | O usuário ${bmember.user} recusou o pedido de casamento de ${message.author}...\n||se precisar um abraço estou aqui ${message.author}, fica triste não|| `
               }
             });
           }

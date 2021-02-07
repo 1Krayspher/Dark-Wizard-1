@@ -25,6 +25,7 @@ module.exports = {
       return message.channel
         .send({
           embed: {
+            color: 3447003,
             timestamp: new Date(),
             title: "Modo de Uso",
             description:
@@ -87,10 +88,11 @@ module.exports = {
 
     message.channel.send({
       embed: {
+        color: 3447003,
         timestamp: new Date(),
         title: "Saque Bancário",
         description:
-          `💵 | Você sacou **${require("currency-formatter").format(din, { code: "de-DE", symbol: "R$ ", precision: 0})}** do seu Banco com sucesso`,
+          `💵 | Você sacou **${require("currency-formatter").format(din, { code: "de-DE", symbol: "R$ ", precision: 0})}** do banco com sucesso`,
         footer: {
           icon_url: message.author.avatarURL,
           text: message.author.tag

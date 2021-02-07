@@ -19,15 +19,16 @@ module.exports = {
     if (!regexArray || regexArray.length < 1) {
       return message.channel.send({
         embed: {
+          color: 3447003,
           timestamp: new Date(),
           title: "Sistema de Rank",
           description:
             prefixo +
-            "Rank Level \n" +
+            "rank level \n" +
             prefixo +
-            "Rank Dinheiro \n" +
+            "rank dinheiro \n" +
             prefixo +
-            "Rank Duckets `(Global)`",
+            "rank poções `(Global)`",
           footer: {
             icon_url: message.guild.iconURL,
             text: message.guild.name
@@ -52,6 +53,7 @@ module.exports = {
           if (snapshot.val() == null) {
             message.channel.send({
               embed: {
+                color: 3447003,
                 title: "Rank de Level Top " + ranktop,
                 description:
                   "❌ | Não há registros de Level para este servidor!"
@@ -88,6 +90,7 @@ module.exports = {
                   var msg1 = msgArr.join(`\n`);
                   message.channel.send({
                     embed: {
+                      color: 3447003,
                       timestamp: new Date(),
                       title: "Rank de Level Top " + ranktop,
                       description: msg1,
@@ -121,6 +124,7 @@ module.exports = {
           if (snapshot.val() == null) {
             message.channel.send({
               embed: {
+                color: 3447003,
                 title: "Rank de Dinheiro Top " + ranktop,
                 description:
                   "❌ | Não há registros de Dinheiro para este servidor!"
@@ -156,6 +160,7 @@ module.exports = {
                   var msg2 = msgArr.join(`\n`);
                   message.channel.send({
                     embed: {
+                      color: 3447003,
                       timestamp: new Date(),
                       title: "Rank de Dinheiro Top " + ranktop,
                       description: msg2,
@@ -176,7 +181,7 @@ module.exports = {
         });
     }
     //
-    if (message.content.toLowerCase() == prefixo + "rank duckets") {
+    if (message.content.toLowerCase() == prefixo + "rank poções") {
       var arr = [];
       var counter = 0;
       var pos = 1;
@@ -188,8 +193,9 @@ module.exports = {
           if (snapshot.val() == null) {
             message.channel.send({
               embed: {
-                title: "Rank de Duckets Top " + ranktop,
-                description: "❌ | Não há registros de Duckets Global!"
+                color: 3447003,
+                title: "Rank de Poções Top " + ranktop,
+                description: "❌ | Não há registros de Poções Global!"
               }
             });
             return;
@@ -212,7 +218,7 @@ module.exports = {
                 msgArr.push(
                   `**${pos++}** ${client.users.get(
                     u.ID
-                  )} - Duckets: **${require("currency-formatter").format(
+                  )} - Poções: **${require("currency-formatter").format(
                     u.duckets,
                     { code: "de-DE", precision: 0 }
                   )}**`
@@ -222,8 +228,9 @@ module.exports = {
                   var msg3 = msgArr.join(`\n`);
                   message.channel.send({
                     embed: {
+                      color: 3447003,
                       timestamp: new Date(),
-                      title: "Rank de Duckets Top " + ranktop,
+                      title: "Rank de Poções Top " + ranktop,
                       description: msg3,
 
                       footer: {
